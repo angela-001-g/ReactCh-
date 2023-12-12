@@ -8,21 +8,22 @@ function App() {
 
   const handleClick = e => {
     e.preventDefault()
-      const terminar = 0 
+    
   }
 
   return (
-    <>
-        <button
-          onClick={() => handleClick(setButtonState(!buttonState))}
-        >
-          Show/Hide
-        </button>
+    <> 
+      <div className='div1'>
+          <button
+            onClick={() => handleClick(setButtonState(!buttonState))}
+          >
+            Show/Hide
+          </button>
 
-        <div>
-        { buttonState ? 'Welcome to react challenges' : '' }
-        </div>
-
+          <div>
+          { buttonState ? 'Welcome to react challenges' : '' }
+          </div>
+      </div>
     </>
   )
 }
