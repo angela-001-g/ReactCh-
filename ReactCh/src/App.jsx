@@ -8,7 +8,7 @@ function App() {
 
   const handleClick = e => {
     e.preventDefault()
-
+      const terminar = 0 
   }
 
   return (
