@@ -9,7 +9,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #800080;
+  background-color: #008b8b;
   color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -39,3 +39,10 @@ button:focus-visible {
   display: flex;
   gap: 10px
 }
+
+.div2 {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px
+}
+
