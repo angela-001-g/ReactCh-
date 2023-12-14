@@ -1,66 +1,80 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
+import Tabla from "./components/Tabla";
+
+import "./App.css";
 
 function App() {
+  const [name, setName] = useState("");
+  const [cedula, setCedula] = useState("");
+  const [direccion, setDireccion] = useState("");
 
-  const [number, setNumber] = useState(0)
-  const [inputNumber, setInputNumber] = useState(0)
+  const [registro, setRegistro] = useState([]);
 
-  const handleOperation = (operation) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    let result;
-    
-    if( operation === 'add'){
-      result  = number + 1 
-    } else {
-      result = number - 1 
-    }
-    setNumber(result)
+    const objectRegistro = {
+      name,
+      cedula,
+      direccion,
+    };
 
-  }
+    setRegistro([...registro, objectRegistro]);
 
-  const handleSum = (num) => {
-    const intNum = parseInt(num)
-    const newNum = number + intNum
-    
-    setNumber(newNum)
-  }
+    setName("");
+    setCedula("");
+    setDireccion("");
+  };
 
   return (
-    <> 
-      <div className='div1'>
-          <button
-            onClick={() => handleOperation('substract')}
-          >
-            remove
-          </button>
-          <div className='numero'>
-            {number}
+    <>
+      <div className="div1">
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name">Nombre</label>
           </div>
-          <button
-            onClick={() => handleOperation('add')}
-          >
-            add
-          </button>
-
-      </div>
-      <div className='div2'>
-        <form >
           <input
-          type="number"
-          placeholder='0'
-          onChange={e => setInputNumber(e.target.value)}
+            type="text"
+            placeholder="nombre"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
+
+          <div>
+            <label htmlFor="cedula">Cedula</label>
+          </div>
+          <input
+            type="number"
+            id="cedula"
+            value={cedula}
+            placeholder="cedula"
+            onChange={(e) => setCedula(e.target.value)}
+          />
+
+          <div>
+            <label htmlFor="direccion">Dirección</label>
+          </div>
+          <input
+            type="text"
+            id="direccion"
+            value={direccion}
+            placeholder="direccion"
+            onChange={(e) => setDireccion(e.target.value)}
+          />
+
+          <div className="registro">
+            <input type="submit" value="Registrarse" />
+          </div>
         </form>
-        <button
-          onClick={() => handleSum(inputNumber)}
-        >
-          add
-        </button>
+
+        <div>
+          <Tabla registro={registro} />
+        </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
