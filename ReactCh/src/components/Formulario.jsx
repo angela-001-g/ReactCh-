@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Tabla from "./Tabla";
+import Alert from "./Alert";
+import "../styles/form.css";
 
 function Formulario() {
   const [name, setName] = useState("");
@@ -7,6 +9,8 @@ function Formulario() {
   const [address, setAddress] = useState("");
 
   const [register, setRegister] = useState([]);
+  const [alert, setAlert] = useState(false);
+  const [msg, setMsg] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,16 +21,45 @@ function Formulario() {
       address,
     };
 
+    if ([name, identification, address].includes("")) {
+      setAlert(true);
+      setMsg({
+        msg: "All fields are required",
+        type: "error",
+      });
+      return;
+    }
+
+    if (name.length < 3) {
+      setAlert(true);
+      setMsg({
+        msg: "Min 3 chars to name",
+        type: "error",
+      });
+      return;
+    }
+
+    if (identification.length > 12) {
+      setAlert(true);
+      setMsg({
+        msg: "Must be less than 12 numbers",
+        type: "error",
+      });
+      return;
+    }
+
     setRegister([...register, objectRegistro]);
 
     setName("");
     setIdentification("");
     setAddress("");
+    setAlert(false);
   };
 
   return (
     <>
       <div className="div1">
+        {alert && <Alert msg={msg} />}
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name</label>
@@ -35,6 +68,7 @@ function Formulario() {
             type="text"
             placeholder="name"
             id="name"
+            maxLength="25"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -56,6 +90,7 @@ function Formulario() {
           <input
             type="text"
             id="address"
+            maxLength="20"
             value={address}
             placeholder="address"
             onChange={(e) => setAddress(e.target.value)}
