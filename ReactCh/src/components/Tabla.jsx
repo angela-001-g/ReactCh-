@@ -1,22 +1,24 @@
 /* eslint-disable react/prop-types */
 
-function Tabla({ registro }) {
+function Tabla({ register }) {
   return (
     <div>
       <table>
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Cedula</th>
-            <th>Direccion</th>
+            <th>Name</th>
+            <th>Identification</th>
+            <th>Address</th>
           </tr>
         </thead>
         <tbody>
-          {registro.map((regist) => (
-            <tr key={`${regist.name}-${regist.cedula}-${regist.direccion}`}>
+          {register.map((regist) => (
+            <tr
+              key={`${regist.name}-${regist.identification}-${regist.address}`}
+            >
               <td>{regist.name}</td>
-              <td>{regist.cedula}</td>
-              <td>{regist.direccion}</td>
+              <td>{regist.identification}</td>
+              <td>{regist.address}</td>
             </tr>
           ))}
         </tbody>
