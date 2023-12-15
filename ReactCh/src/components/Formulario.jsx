@@ -58,11 +58,13 @@ function Formulario() {
 
   return (
     <>
+      <div></div>
       <div className="div1">
-        {alert && <Alert msg={msg} />}
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name</label>
+        <form onSubmit={handleSubmit} className="form">
+          {alert && <Alert msg={msg} />}
+
+          <div className="lab">
+            <label htmlFor="name">Name:</label>
           </div>
           <input
             type="text"
@@ -73,8 +75,8 @@ function Formulario() {
             onChange={(e) => setName(e.target.value)}
           />
 
-          <div>
-            <label htmlFor="identification">Identification</label>
+          <div className="lab">
+            <label htmlFor="identification">Identification:</label>
           </div>
           <input
             type="number"
@@ -84,8 +86,8 @@ function Formulario() {
             onChange={(e) => setIdentification(e.target.value)}
           />
 
-          <div>
-            <label htmlFor="address">Adress</label>
+          <div className="lab">
+            <label htmlFor="address">Adress:</label>
           </div>
           <input
             type="text"
@@ -97,7 +99,7 @@ function Formulario() {
           />
 
           <div className="register">
-            <input type="submit" value="Register" />
+            <input type="submit" value="Register" className="inpSubmit" />
           </div>
         </form>
 
