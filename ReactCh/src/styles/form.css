@@ -46,3 +46,8 @@ textarea {
 .lab {
     margin-top: 15px;
 }
+
+.inpForm{
+    border-radius: 5px;
+    text-align: center;
+}

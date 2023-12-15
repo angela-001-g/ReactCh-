@@ -71,6 +71,7 @@ function Formulario() {
             placeholder="name"
             id="name"
             maxLength="25"
+            className="inpForm"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -83,6 +84,7 @@ function Formulario() {
             id="identification"
             value={identification}
             placeholder="identification"
+            className="inpForm"
             onChange={(e) => setIdentification(e.target.value)}
           />
 
@@ -96,6 +98,7 @@ function Formulario() {
             value={address}
             placeholder="address"
             onChange={(e) => setAddress(e.target.value)}
+            className="inpForm"
           />
 
           <div className="register">
