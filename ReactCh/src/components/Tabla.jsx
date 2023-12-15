@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "../styles/table.css";
 
 function Tabla({ register }) {
   return (

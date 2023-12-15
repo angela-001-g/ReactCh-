@@ -58,53 +58,54 @@ function Formulario() {
 
   return (
     <>
-      <div></div>
       <div className="div1">
-        <form onSubmit={handleSubmit} className="form">
-          {alert && <Alert msg={msg} />}
+        <div>
+          <form onSubmit={handleSubmit} className="form">
+            {alert && <Alert msg={msg} />}
 
-          <div className="lab">
-            <label htmlFor="name">Name:</label>
-          </div>
-          <input
-            type="text"
-            placeholder="name"
-            id="name"
-            maxLength="25"
-            className="inpForm"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+            <div className="lab">
+              <label htmlFor="name">Name:</label>
+            </div>
+            <input
+              type="text"
+              placeholder="name"
+              id="name"
+              maxLength="25"
+              className="inpForm"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-          <div className="lab">
-            <label htmlFor="identification">Identification:</label>
-          </div>
-          <input
-            type="number"
-            id="identification"
-            value={identification}
-            placeholder="identification"
-            className="inpForm"
-            onChange={(e) => setIdentification(e.target.value)}
-          />
+            <div className="lab">
+              <label htmlFor="identification">Identification:</label>
+            </div>
+            <input
+              type="number"
+              id="identification"
+              value={identification}
+              placeholder="identification"
+              className="inpForm"
+              onChange={(e) => setIdentification(e.target.value)}
+            />
 
-          <div className="lab">
-            <label htmlFor="address">Adress:</label>
-          </div>
-          <input
-            type="text"
-            id="address"
-            maxLength="20"
-            value={address}
-            placeholder="address"
-            onChange={(e) => setAddress(e.target.value)}
-            className="inpForm"
-          />
+            <div className="lab">
+              <label htmlFor="address">Adress:</label>
+            </div>
+            <input
+              type="text"
+              id="address"
+              maxLength="20"
+              value={address}
+              placeholder="address"
+              onChange={(e) => setAddress(e.target.value)}
+              className="inpForm"
+            />
 
-          <div className="register">
-            <input type="submit" value="Register" className="inpSubmit" />
-          </div>
-        </form>
+            <div className="register">
+              <input type="submit" value="Register" className="inpSubmit" />
+            </div>
+          </form>
+        </div>
 
         <div>
           <Tabla register={register} />
