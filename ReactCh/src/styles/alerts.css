@@ -1,0 +1,7 @@
+.error{
+    border: 15px solid rgb(165, 30, 30);
+    background-color: rgb(165, 30, 30);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

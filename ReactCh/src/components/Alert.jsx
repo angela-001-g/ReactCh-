@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
+import "../styles/alerts.css";
+
 function Alert({ msg }) {
   const message = msg.msg;
 
   return (
     <>
-      <div>{message}</div>
+      <div className="error">{message}</div>
     </>
   );
 }

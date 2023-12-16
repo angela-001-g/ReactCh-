@@ -8,6 +8,7 @@ function App() {
       <div className="divForm">
         <Formulario />
       </div>
+      <div></div>
     </>
   );
 }
