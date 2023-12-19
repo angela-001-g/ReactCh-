@@ -1,4 +1,5 @@
 import Formulario from "./components/Formulario";
+import Timer from "./components/Timer";
 
 import "./App.css";
 
@@ -8,7 +9,9 @@ function App() {
       <div className="divForm">
         <Formulario />
       </div>
-      <div></div>
+      <div className="divTimer">
+        <Timer />
+      </div>
     </>
   );
 }
