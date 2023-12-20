@@ -1,5 +1,11 @@
+import "../styles/timer.css";
+
 function Timer() {
-  return <div>Hola</div>;
+  return (
+    <>
+      <div className="divTimer">Hola</div>
+    </>
+  );
 }
 
 export default Timer;

@@ -6,10 +6,10 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="divForm">
+      <div>
         <Formulario />
       </div>
-      <div className="divTimer">
+      <div>
         <Timer />
       </div>
     </>
