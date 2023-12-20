@@ -1,9 +1,31 @@
 .divTimer{
     border: 7px solid rgb(125, 8, 74);
-    padding: 50px;
+    padding: 40px;
     margin: auto;
     position: relative;
     display: flex;
-    justify-content: center;
-    width: 50%;
+    width: 60%;
+    content:inherit  ;
+}
+
+.divLetters{
+   padding: 5px;
+}
+
+.divButtons{
+    margin-left: 70px;
+    margin-top: 35px;
+}
+
+.butStart{
+    background-color: rgb(15, 163, 15);
+}
+
+.butStop{
+    background-color: rgb(154, 26, 26);
+    margin: 10px;
+}
+
+.butReset{
+    background-color: rgb(177, 177, 11);
 }
