@@ -1,6 +1,9 @@
 .divTimer{
-    width: 300px;
-    border: 15px solid green;
+    border: 7px solid rgb(125, 8, 74);
     padding: 50px;
-    margin: 50px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
 }
